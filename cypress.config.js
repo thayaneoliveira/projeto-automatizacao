@@ -4,6 +4,7 @@ module.exports = defineConfig({
   viewportHeight: 880,
   viewportWidth: 1280,
   e2e: {
+    projectId: "qe36i8",
     video: true,
     screenshotOnRunFailure: true,
     screenshotsFolder: "cypress/screenshots",
