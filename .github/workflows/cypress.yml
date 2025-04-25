@@ -27,12 +27,12 @@ jobs:
           node-version: "14" # Ou a versão que você usa no seu projeto
 
       - name: Install dependencies
-        run: |
-          npm ci
+        run: npm install # Troquei de npm ci para npm install
 
       - name: Start the application
-        run: npm start &
-        working-directory: ./ # Defina o diretório correto se necessário
+        run: |
+          npm start &  # Executa em background
+          sleep 10  # Espera o servidor iniciar
 
       - name: Wait for the app to be ready
         run: npx wait-on http://localhost:3000
