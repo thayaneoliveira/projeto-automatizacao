@@ -1,0 +1,61 @@
+Passo 1: Instalar o Mochawesome
+
+Instale o Mochawesome e os pacotes relacionados para o Cypress:
+
+* npm install --save-dev mochawesome mochawesome-merge mochawesome-report-generator
+
+Passo 2: Configurar o Cypress para usar o Mochawesome
+
+Abra o arquivo de configuração do Cypress, geralmente localizado em cypress.json ou cypress.config.js, e adicione a seguinte configuração para habilitar a geração de relatórios:
+
+{
+  "reporter": "mochawesome",
+  "reporterOptions": {
+    "reportDir": "cypress/results",
+    "overwrite": true,
+    "html": true,
+    "json": true
+  }
+}
+
+Aqui, reportDir define o diretório onde os relatórios serão gerados. Os arquivos JSON serão salvos e o relatório HTML será gerado para visualização.
+Passo 3: Rodar os testes
+
+Agora, ao rodar os testes com npx cypress run, o Mochawesome gerará os relatórios no diretório cypress/results (ou o diretório que você configurou).
+
+npx cypress run
+
+Passo 4: Gerar o Relatório Final
+
+Depois de rodar os testes, use o comando abaixo para mesclar os arquivos JSON gerados e criar o relatório HTML final:
+
+npx mochawesome-merge cypress/results/*.json > mochawesome.json
+npx mochawesome-report-generator mochawesome.json
+
+Isso criará o relatório HTML pronto para ser visualizado.
+
+
+
+Para abrir o arquivo HTML no navegador, você pode usar:
+
+    Se estiver usando o Google Chrome:
+
+google-chrome "/home/thayaneoliveira/Área de trabalho/automatizacao-cypress/cypress/results/mochawesome.html"
+
+Se estiver usando o Firefox:
+
+    firefox "/home/thayaneoliveira/Área de trabalho/automatizacao-cypress/cypress/results/mochawesome.html"
+
+Isso deve abrir o relatório corretamente no seu navegador!
+
+
+
+***** comando para abrir navegador2. Abrir com o navegador diretamente no terminal (se preferir):
+
+Você pode usar um comando para abrir diretamente no navegador com o comando xdg-open:
+
+xdg-open /home/thayaneoliveira/Área\ de\ trabalho/automatizacao-cypress/cypress/results/mochawesome.html
+
+Isso deve abrir automaticamente o arquivo mochawesome.html no navegador padrão.
+
+Se tiver mais alguma dúvida ou algo não funcionar, avise-me!

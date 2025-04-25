@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-04-25T14:25:53.699Z",
+    "end": "2025-04-25T14:26:00.523Z",
+    "duration": 6824,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "d2215161-9444-49be-8904-67bb36ff74b3",
+      "title": "",
+      "fullFile": "cypress/e2e/automatizacao.cy.js",
+      "file": "cypress/e2e/automatizacao.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "2d2e8b59-fa55-4d0d-9cab-47b6946fd255",
+          "title": "Testes após login no menu",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Clica na opção Formulário e preenche formulário",
+              "fullTitle": "Testes após login no menu Clica na opção Formulário e preenche formulário",
+              "timedOut": null,
+              "duration": 5280,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains(\"Bem-vindo ao meu espaço digital de inovação e qualidade!\").should(\"be.visible\");\ncy.contains(\"Formulário\").click();\n// Preencher o formulário\nformPage.fillForm(\"Thayane Oliveira\", \"thayane520.biel@gmail.com\", \"92984240118\", \"27\");\n// Verificar o alerta de sucesso\nformPage.verifyAlert();\n// Submeter o formulário\nformPage.submitButton().click();",
+              "err": {},
+              "uuid": "e61d65d1-9d52-4713-8533-d48f0f998254",
+              "parentUUID": "2d2e8b59-fa55-4d0d-9cab-47b6946fd255",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "e61d65d1-9d52-4713-8533-d48f0f998254"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 5280,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": true,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
